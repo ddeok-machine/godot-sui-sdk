@@ -9,3 +9,5 @@ node_modules/
 *.pem
 sui.keystore
 client.yaml
+js/dist/
+js/node_modules/

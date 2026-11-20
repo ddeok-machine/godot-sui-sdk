@@ -1,0 +1,17 @@
+{
+  "name": "godot-sui-sdk-js",
+  "version": "0.0.1",
+  "private": true,
+  "description": "JS bundle for web signing and the connect page (spike 1a).",
+  "scripts": {
+    "build": "esbuild src/bridge.ts --bundle --format=iife --platform=browser --target=es2020 --outfile=dist/sui_bridge.js"
+  },
+  "dependencies": {
+    "@mysten/slush-wallet": "2.0.1",
+    "@mysten/sui": "3.0.1",
+    "@mysten/wallet-standard": "0.22.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
