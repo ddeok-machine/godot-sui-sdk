@@ -3,7 +3,7 @@ extends SceneTree
 const TESTS_DIR := "res://tests"
 
 
-func _init() -> void:
+func _initialize() -> void:
 	var passed := 0
 	var failed := 0
 	var dir := DirAccess.open(TESTS_DIR)
@@ -27,7 +27,7 @@ func _init() -> void:
 			var name: String = m["name"]
 			if not name.begins_with("test_"):
 				continue
-			var ok = inst.call(name)
+			var ok = await inst.call(name)
 			if ok == true:
 				print("PASS ", f, "::", name)
 				passed += 1

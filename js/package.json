@@ -4,7 +4,9 @@
   "private": true,
   "description": "JS bundle for web signing and the connect page (spike 1a).",
   "scripts": {
-    "build": "esbuild src/bridge.ts --bundle --format=iife --platform=browser --target=es2020 --outfile=dist/sui_bridge.js"
+    "build:bridge": "esbuild src/bridge.ts --bundle --format=iife --platform=browser --target=es2020 --outfile=dist/sui_bridge.js",
+    "build:connect": "esbuild src/connect.ts --bundle --format=iife --platform=browser --target=es2020 --outfile=dist/connect.js",
+    "build": "npm run build:bridge && npm run build:connect"
   },
   "dependencies": {
     "@mysten/slush-wallet": "2.0.1",
