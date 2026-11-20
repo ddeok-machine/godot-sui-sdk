@@ -1,0 +1,11 @@
+.godot/
+exports/
+build/
+node_modules/
+.env*
+*.keystore
+*.jks
+*.key
+*.pem
+sui.keystore
+client.yaml
